@@ -3,12 +3,12 @@ from __future__ import annotations
 import logging
 
 from catt.controllers import setup_cast
-from catt.error import CastError
-from homeassistant.core import HomeAssistant, ServiceCall, callback
-from homeassistant.helpers.typing import ConfigType
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.core import HomeAssistant
 from homeassistant.helpers import entity_registry, device_registry
 
-DOMAIN = "catt_service"
+from .const import DOMAIN
+
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -44,3 +44,6 @@ def setup(hass, config):
     hass.services.register(DOMAIN, "cast_site", handle_cast_site)
     return True
 
+
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
+    return True

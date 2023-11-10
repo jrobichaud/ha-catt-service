@@ -4,7 +4,7 @@
   "dependencies": [
     "cast"
   ],
-  "integration_type": "hub",
+  "config_flow": true,
   "documentation": "https://github.com/jrobichaud/ha-catt-service",
   "codeowners": [
     "@jrobichaud"
