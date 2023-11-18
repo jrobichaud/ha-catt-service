@@ -1,0 +1,23 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Déjà configuré. Une seule configuration possible."
+    }
+  },
+  "services": {
+    "cast_site": {
+      "name": "Cast Site",
+      "description": "Cast site sur la Chromecast sélectionnée",
+      "fields": {
+        "device_id": {
+          "name": "Appareil",
+          "description": "Chromecast cible"
+        },
+        "url": {
+          "name": "url",
+          "description": "Url du site à afficher"
+        }
+      }
+    }
+  }
+}

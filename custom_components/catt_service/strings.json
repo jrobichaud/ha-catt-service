@@ -1,0 +1,23 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::single_instance_allowed%]"
+    }
+  },
+  "services": {
+    "cast_site": {
+      "name": "Cast Site",
+      "description": "Cast site on selected Chromecast",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Target Chromecast"
+        },
+        "url": {
+          "name": "url",
+          "description": "Url of the site to show"
+        }
+      }
+    }
+  }
+}

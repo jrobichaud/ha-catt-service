@@ -15,12 +15,9 @@ _LOGGER = logging.getLogger(__name__)
 def setup(hass, config):
 
     def handle_cast_site(call):
-        entity_id = call.data.get("entity_id")
-        ent_reg = entity_registry.async_get(hass)
         dev_reg = device_registry.async_get(hass)
-        entity = ent_reg.async_get(entity_id)
-        _LOGGER.debug(f'entity {entity}')
-        device_id = entity.device_id
+
+        device_id = call.data.get("device_id")
         device = dev_reg.async_get(device_id)
         _LOGGER.debug(f'device {device}')
 

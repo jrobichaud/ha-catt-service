@@ -1,17 +1,12 @@
 cast_site:
-  description: Cast site on selected chromecast
   fields:
-    entity_id:
-      name: Entity
-      description: Media Player entity to open the url on
+    device_id:
       required: true
       selector:
-        entity:
+        device:
           integration: cast
           domain: media_player
     url:
-      name: url
-      description: Url of the site to show
       required: true
       example: https://example.com
       selector:
